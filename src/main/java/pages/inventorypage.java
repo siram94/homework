@@ -12,43 +12,39 @@ public class inventorypage {
         this.driver = driver;
         PageFactory.initElements(driver,this);
     }
-    @FindBy(id = "user-name")
-    WebElement username ;
+@FindBy(id = "react-burger-menu-btn")
+WebElement menu;
 
-    @FindBy(id ="password")
-   WebElement password;
+    public void setMenu() {
+       menu.click();
 
-
-    @FindBy(id="login-button")
-    WebElement loginbutton;
-
-   @FindBy(id= "add-to-cart-sauce-labs-backpack")
-   WebElement addtocart ;
-
-   @FindBy(xpath = "//div[text()='Sauce Labs Backpack']")
-   WebElement slectaproduct;
-
-   @FindBy(xpath = "//select[@class='product_sort_container']")
-   WebElement nameorprice;
-
-   public void typeusername(String user){
-        username.sendKeys(user);
-    }
-    public void typpassword(String pass){
-        password.sendKeys(pass);
-    }
-    public void login() {
-        loginbutton.click();
 
     }
+
+    @FindBy(id= "add-to-cart-sauce-labs-backpack")
+    WebElement addtocart ;
     public void cart(){
-       addtocart.click();
-        }
-        public void slectproduct(){
-       slectaproduct.click();
-        }
-        public void nameorprice(){
-       nameorprice.click();
-        }
+        addtocart.click();
+    }
+
+    @FindBy(xpath = "//div[text()='Sauce Labs Backpack']")
+    WebElement slectaproduct;
+    public void slectproduct() {
+        slectaproduct.click();
+    }
+        @FindBy(xpath = "//select[@class='product_sort_container']")
+        WebElement nameorprice;
+
+    public void nameorprice(){
+        nameorprice.click();
+    }
+    @FindBy(id = "react-burger-menu-btn")
+    WebElement Menu;
+    public void Menu (){
+        Menu.click();
+    }
+
+
+
 
     }

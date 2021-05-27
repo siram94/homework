@@ -14,8 +14,8 @@ public class MenuPage {
     }
     @FindBy(id = "react-burger-menu-btn")
     WebElement menu;
-    public void Menu() {
-        menu.click();
+   public void Menu(){
+       menu.click();
     }
     @FindBy(xpath = "//a[text()='About']")
     WebElement elements;
@@ -26,8 +26,8 @@ public class MenuPage {
     @FindBy(linkText = "https://saucelabs.com/")
     WebElement saucelabs;
 
-    public void Saucelabs() {
-        saucelabs.getLocation();
+    public boolean Saucelabs() {
+       return saucelabs.isDisplayed();
     }
 
 

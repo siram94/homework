@@ -19,25 +19,26 @@ public class loginpage {
    @FindBy(id="user-name")
    WebElement username;
 
+    public void typeusername(String user) {
+        username.sendKeys(user);
+    }
     @FindBy(id="password")
     WebElement password ;
+
+    public void typpassword(String pass){
+        password.sendKeys(pass);
+    }
 
     @FindBy(id="login-button")
        WebElement loginbutton ;
 
- @FindBy(xpath = "//div[@class='error-message-container error']")
-  WebElement messageerror;
-
-    public void typeusername(String user){
-        username.sendKeys(user);
-    }
-    public void typpassword(String pass){
-        password.sendKeys(pass);
-    }
     public void login(){
         loginbutton.click();
     }
-    public boolean messegeerror(){
+ @FindBy(xpath = "//div[@class='error-message-container error']")
+  WebElement messageerror;
+
+ public boolean messegeerror(){
      return messageerror.isDisplayed();
     }
 
