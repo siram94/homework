@@ -14,7 +14,7 @@ import java.util.List;
 
 
 @RunWith(Cucumber.class)
-     @CucumberOptions(features = "src/test/resources/features", glue = "stepsdef", plugin ={ "json:target/cucumber_report.json"} ,tags= "@menu")
+     @CucumberOptions(features = "src/test/resources/features", glue = "stepsdef", plugin ={ "json:target/cucumber_report.json"} )
     public class swaglabsrunner {
         @AfterClass
         public static void generateReports() {

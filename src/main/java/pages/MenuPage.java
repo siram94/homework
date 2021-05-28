@@ -20,7 +20,7 @@ public class MenuPage {
     @FindBy(xpath = "//a[text()='About']")
     WebElement elements;
 
-    public void Elements(String element) {
+    public void link(String element) {
         elements.click();
     }
     @FindBy(linkText = "https://saucelabs.com/")

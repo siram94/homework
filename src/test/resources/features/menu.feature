@@ -8,5 +8,5 @@ Feature: test menu page
 @menu
   Scenario: test user navigate to the menu
     Given the user opens the menu
-    Then the user select "about" in the menu
+    Then the user select "About" in the menu
     And user should be able to land in saucelabs page

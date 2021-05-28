@@ -19,16 +19,21 @@ public class Menusteps {
     @Given("the user opens the menu")
     public void the_user_opens_the_menu() {
         MenuPage.Menu();
-    }
 
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
     @And("the user select {string} in the menu")
     public void the_user_select_in_the_menu(String element) {
-        MenuPage.Elements(element);
+        MenuPage.link(element);
 
     }
     @Then("user should be able to land in saucelabs page")
     public void user_should_be_able_to_land_in_saucelabs_page() {
-      MenuPage.Saucelabs();
+
         Assert.assertTrue(driver.getTitle().contains(" Sauce Labs"));
     }
 }
